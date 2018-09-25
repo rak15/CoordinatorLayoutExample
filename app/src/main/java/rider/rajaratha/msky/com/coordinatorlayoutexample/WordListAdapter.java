@@ -13,7 +13,7 @@ import java.util.LinkedList;
 public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolder> {
     private final LinkedList<String> mWordList;
 
-    public class WordViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class WordViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public final TextView wordItemView;
         final WordListAdapter mAdapter;
 
@@ -28,7 +28,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
         public void onClick(View v) {
             // All we do here is prepend "Clicked! " to the text in the view, to verify that
             // the correct item was clicked. The underlying data does not change.
-            wordItemView.setText ("Clicked! "+ wordItemView.getText());
+            wordItemView.setText("Clicked! " + wordItemView.getText());
         }
     }
 
@@ -40,8 +40,8 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
     @Override
     public WordListAdapter.WordViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View mItemView = inflater.inflate(R.layout.wordlist_item,parent,false);
-        return new WordViewHolder(mItemView,this);
+        View mItemView = inflater.inflate(R.layout.wordlist_item, parent, false);
+        return new WordViewHolder(mItemView, this);
     }
 
     @Override
